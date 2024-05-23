@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
 
     alignItems: "center",
   },
+  selectedContainer: {
+    borderColor: "#81D5FE",
+    backgroundColor: "#DDF4FE",
+  },
   optionImage: {
     width: "100%",
     flex: 1,
@@ -25,6 +29,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     marginTop: 10,
+  },
+  selectedText: {
+    color: "#40BEF7",
+    fontWeight: "bold",
   },
 });
 

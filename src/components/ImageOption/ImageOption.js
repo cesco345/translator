@@ -1,10 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import styles from "./styles";
+import PropTypes from "prop-types";
 
-const ImageOption = ({ image, text }) => {
+const ImageOption = ({ image, text, isSelected, onPress }) => {
   return (
-    <View style={styles.optionContainer}>
+    <Pressable
+      onPress={onPress}
+      style={[
+        styles.optionContainer,
+        isSelected ? styles.selectedContainer : {},
+      ]}
+    >
       <Image
         source={{
           uri: image,
@@ -14,9 +21,24 @@ const ImageOption = ({ image, text }) => {
         onLoad={() => console.log("Glass image loaded successfully")}
         onError={(error) => console.log("Error loading glass image", error)}
       />
-      <Text style={styles.optionText}>{text}</Text>
-    </View>
+      <Text style={isSelected ? styles.selectedText : styles.optionText}>
+        {text}
+      </Text>
+    </Pressable>
   );
+};
+
+ImageOption.propTypes = {
+  image: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  isSelected: PropTypes.bool,
+  onPress: PropTypes.func,
+};
+
+ImageOption.defaultProps = {
+  text: "Default",
+  isSelected: false,
+  onPress: () => {},
 };
 
 export default ImageOption;
