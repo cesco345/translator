@@ -10,18 +10,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
 
-    borderRadius: 8,
+    //borders
+    borderRadius: 5,
     borderBottomWidth: 5,
     borderColor: "#57A600",
   },
+
   disabledContainer: {
     backgroundColor: "lightgrey",
-    color: "grey",
+    borderColor: "grey",
   },
   text: {
+    fontSize: 20,
     color: "white",
     fontWeight: "bold",
-    fontSize: 20,
 
     borderColor: "white",
     borderBottomWidth: 1.5,

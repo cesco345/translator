@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "stretch",
   },
+
   optionsContainer: {
     width: "100%",
     flex: 1,

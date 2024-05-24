@@ -2,37 +2,36 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   optionContainer: {
-    //border
+    // border
     borderWidth: 2,
     borderBottomWidth: 4,
     borderColor: "lightgrey",
     borderRadius: 10,
 
-    //size
+    // size
     width: "48%",
     height: "48%",
 
-    //spacing inside container
+    //spacing
     padding: 10,
 
     alignItems: "center",
   },
   selectedContainer: {
-    borderColor: "#81D5FE",
     backgroundColor: "#DDF4FE",
+    borderColor: "#81D5FE",
   },
   optionImage: {
     width: "100%",
     flex: 1,
   },
   optionText: {
-    fontSize: 20,
     fontWeight: "bold",
-    marginTop: 10,
+    color: "black",
   },
   selectedText: {
-    color: "#40BEF7",
     fontWeight: "bold",
+    color: "#40BEF7",
   },
 });
 
